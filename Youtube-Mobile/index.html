@@ -4,60 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5719f078e8.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
     <title>Youtube Mobile</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__logo">
+    <header>
+        <div class="logo">
             <i class="fab fa-youtube"></i>
-            Youtube
+            <span>Youtube</span>
         </div>
-        <ul class="navbar__menu">
-            <li><i class="fas fa-search"></i></li>
-            <li><a href="#"><i class="fas fa-ellipsis-v"></i></a>
-        </ul>
-    </nav>
+        <div class="menu">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
 
-    <main class="main__video">
-        <video class="video" controls width="250">
-            <source src="/media/introduce.mp4">
+    <section class="player">
+        <video controls width="250">
+            <source src="video/video.mp4">
             Sorry, your browser doesn't support embedded videos.
         </video>
-    </main>
+    </section>
     
-
-    <div class="video__intro">
-        <ul class="hashtag">
-            <li><a href="#">#DreamCoding</a></li>
-            <li><a href="#">#DreamCoders</a></li>
-            <li><a href="#">#Eille</a></li>
-        </ul>
-
-        <p class="video__title">
-            Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 따라 만들기 | 프론트엔드 개발자 입문편: HTML,CSS,JavaScript
-        </p>
-
-        <ul class="video__inform">
-            <li class="video__views">1M views</li>
-            <li class="video__uploadTime">1 months ago</li>
-        </ul>
-
-        <ul>
-            <li class="video__icons1"><a href=""><i class="fas fa-thumbs-up"></i></a></li>
-            <li class="video__icons2"><a href=""><i class="fas fa-thumbs-down"></i></a></li>
-            <li class="video__icons3"><a href=""><i class="fas fa-share"></i></a></li>
-            <li class="video__icons4"><a href=""><i class="fas fa-plus"></i></a></li>
-            <li class="video__icons5"><a href=""><i class="fas fa-flag"></i></a></li>
-        </ul>
-
-        <div class="uploader">
-            <img src="media/profile.jpg" alt="" class="profile__img">
+    <section class="infoAndUpNext">
+        <section class="info">
+            <div class="metadata">
+                <ul class="hashtag">
+                    <li><a href="#">#DreamCoding</a></li>
+                    <li><a href="#">#DreamCoders</a></li>
+                    <li><a href="#">#Gayeon</a></li>
+                </ul>
+        
+                <div class="titleAndbtn">
+                    <span class="title clamp">
+                        Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 따라 만들기 
+                        | 프론트엔드 개발자 입문편: HTML,CSS,JavaScript
+                        드림코딩과 함께하는 프론트엔드 실전 입문편
+                    </span>
+                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                </div>
+                
+                <div class="video__info">
+                    <span class="video__views">1M views</span>
+                    <span class="video__uploadTime">1 months ago</span>    
+                </div>
+                
+            </div>
             
-        </div>
-    </div>
-
+            
+            <ul class="actions">
+                <li class="video__icons1"><button><i class="active fas fa-thumbs-up"></i>1K</button></li>
+                <li class="video__icons2"><button><i class="fas fa-thumbs-down"></i>0</button></li>
+                <li class="video__icons3"><button><i class="fas fa-share"></i>Share</button></li>
+                <li class="video__icons4"><button><i class="fas fa-plus"></i>Save</button></li>
+                <li class="video__icons5"><button><i class="fas fa-flag"></i>Report</button></li>
+            </ul>
+    
+            <div class="channel">
+                <div class="metadata">
+                    <img src="img/profile.jpg" alt="" class="profile__img"/>
+                    <div class="info">
+                        <span class="name">드림코딩 by 가연</span>
+                        <span class="subscibers">1M subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
+        <section class="UpNext">
+            <span class="title">Up next</span>
+            <ul>
+                <li class="item">
+                    <a href=""><img class="thumbnail" src="img/thumbnail1.jpg" alt=""></a>
+                    <div class="info">
+                        <span class="title">
+                            짱귀여운 강아지 보고가세요
+                        </span>
+                        <span class="channel_name">lovedogs</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <a href=""><img class="thumbnail" src="img/thumbnail2.jpg" alt=""></a>
+                    <div class="info">
+                        <span class="title">
+                            짱귀여운 강아지 보고가세요222
+                        </span>
+                        <span class="channel_name">lovedogs</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <a href=""><img class="thumbnail" src="img/thumbnail3.jpg" alt=""></a>
+                    <div class="info">
+                        <span class="title">
+                            짱귀여운 강아지 보고가세요3333
+                        </span>
+                        <span class="channel_name">lovedogs</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
+    </section>
     
 </body>
 </html>

@@ -1,0 +1,229 @@
+:root {
+  /*color*/
+
+  --white-color: #f9f9f9;
+  --black-color: #120900;
+  --blue-color: #065fd5;
+  --red-color: #fd0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #c2c4c4;
+
+  /*size*/
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /*font size*/
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  align-items: baseline;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+header .logo {
+  font-size: var(--font-large);
+}
+.fa-youtube {
+  color: var(--red-color);
+}
+.fa-ellipsis-v {
+  margin-left: var(--padding);
+}
+
+/*video*/
+
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player video {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/*info*/
+
+.infoAndUpNext > .info {
+  padding: var(--padding) var(--padding) 0 var(--padding);
+}
+
+.info .metadata .hashtag {
+  list-style: none;
+  font-size: var(--font-small);
+  display: flex;
+  padding-left: 0;
+}
+
+.hashtag a {
+  margin-right: 5px;
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+.info .metadata .titleAndbtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .metadata .titleAndbtn .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+.info .metadata .titleAndbtn .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.info .metadata .titleAndbtn .moreBtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleAndbtn .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+.video__info {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  margin: var(--padding) 0;
+  align-items: baseline;
+  color: var(--grey-dark-color);
+}
+.info .actions button i {
+  margin: 0 auto;
+  padding-bottom: calc(var(--padding) / 2);
+}
+
+.info .actions button i.active {
+  color: var(--blue-color);
+}
+.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+.channel .metadata .info {
+  display: flex;
+  margin-left: 5px;
+  flex-direction: column;
+}
+.channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+.channel .metadata .info .subscibers {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+.channel .metadata .profile__img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+/*upnext*/
+.UpNext {
+  padding: var(--padding);
+}
+.UpNext > .title {
+  font-size: medium;
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.UpNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.UpNext .item a {
+  margin-right: var(--padding);
+  flex: 1 1 35%;
+}
+.UpNext .item a img {
+  width: 100%;
+}
+.UpNext .item .info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.UpNext .item .info .channel_name {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.UpNext .item .info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.UpNext .item .moreBtn {
+  flex: 1 1 5%;
+  height: 100%;
+  padding-top: 5px;
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+  }
+}
