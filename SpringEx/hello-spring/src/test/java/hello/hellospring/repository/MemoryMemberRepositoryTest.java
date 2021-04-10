@@ -13,23 +13,23 @@ public class MemoryMemberRepositoryTest {
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
-    public void afterEach() { // 테스트가 하나 끝날때 마다 clear(순서는 보장이 안되기 때문)
+    public void afterEach() { //테스트가 하나 끝날때 마다 clear(순서는 보장이 안되기 때문)
         repository.clearStore();
-    }
+    }// 테스트가 하나 끝날때 마다 clear(순서는 보장이 안되기 때문)
 
     @Test
-    public void save() {
+    public void save(){
         Member member = new Member();
         member.setName("spring");
         repository.save(member);
         Member result = repository.findById(member.getId()).get();
 
-        // Assertions.assertEquals(member,result);
-        assertThat(member).isEqualTo(result);
+        //Assertions.assertEquals(member,result);
+        assertThat(member).isEqualTo(result); //테스트할 때 씀. 검증
     }
 
     @Test
-    public void findByName() {
+    public void findByName(){
         Member member1 = new Member();
         member1.setName("spring1");
         repository.save(member1);
@@ -44,7 +44,7 @@ public class MemoryMemberRepositoryTest {
     }
 
     @Test
-    public void findAll() {
+    public void findAll(){
         Member member1 = new Member();
         member1.setName("spring1");
         repository.save(member1);
