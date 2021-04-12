@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 *   더 좋은 테스트일 확률이 높다..!
 */
 @Transactional //트랜잭션 실행 후, 롤백을 해주므로 실제 디비에는 반영 안됨.
+
 class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService; //test이므로 그냥 필드주입해도 괜찮음
@@ -28,7 +30,7 @@ class MemberServiceIntegrationTest {
     void 회원가입() {
         //given
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring100");
 
         //when
         Long saveId = memberService.join(member);
