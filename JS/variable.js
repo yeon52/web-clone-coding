@@ -3,7 +3,7 @@
 //added in ES 5
 'use strict';
 
-//2. Variable
+//2. Variable, rw(read/write)
 //let (added in ES6)
 let globalName = 'global name'; //글로벌 변수, 어느곳에서나 접근 가능
 
@@ -28,15 +28,21 @@ console.log(globalName);
 }
 console.log(age);
 
-//3. constants
+//3. constant, r(read only)
 //값을 선언함과 동시에 고정. 변경할 수 없음 - immutable
-// - security
-// - thread safety(다양한 스레드가 동시에 접근, 변경하면 위험)
-// - reduce human mistakes
 // 웬만하면 const 쓰자 !
 // <-> mutable
 const daysInWeek = 7;
 const maxNumber = 5;
+
+//Note!
+//Immutable data types : primitive types, frozen objects (i.e. object.freeze())
+//Mutable data types: all objects by default are mutable in JS
+//favor immutable data type always for a few reasons:
+// - security
+// - thread safety(다양한 스레드가 동시에 접근, 변경하면 위험)
+// - reduce human mistakes
+
 
 //4. variable types
 //primitive, single item(더이상 나눠질 수 없음) : number, string, boolean, null, undefined, symbol
